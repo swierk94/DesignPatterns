@@ -7,10 +7,10 @@ namespace BehavioralPatterns
     {
         internal static void Main()
         {
-            Console.WriteLine(Strategy(new StrategyA()));
+            Console.WriteLine(GetSpecificStrategyResult(new StrategyA()));
         }
 
-        internal static string Strategy(ISpecificStrategy specificStrategy)
+        internal static string GetSpecificStrategyResult(ISpecificStrategy specificStrategy)
         {
             var strategy = new Strategy(specificStrategy);
             var result = strategy.GetSpecificStrategyResult();
